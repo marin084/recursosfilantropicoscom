@@ -1,0 +1,827 @@
+[2023-04-06 08:33:15] api[recursos-filantropicos].ERROR: Directus\Database\Exception\ForbiddenSystemTableDirectAccessException: Direct Access to System collections are not allowed in /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/RelationsService.php:42
+Stack trace:
+#0 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/RelationsService.php(49): Directus\Services\RelationsService->throwErrorIfRestrictedTable
+#1 /Users/marin084/Sites/recursosfilantropicoscom/src/endpoints/Relations.php(55): Directus\Services\RelationsService->create
+#2 [internal function]: Directus\Api\Routes\Relations->create
+#3 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(40): call_user_func
+#4 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke
+#5 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\Route->__invoke
+#6 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#7 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#8 [internal function]: Slim\DeferredCallable->__invoke
+#9 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#10 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AuthenticationMiddleware.php(124): Slim\Route->Slim\{closure}
+#11 [internal function]: Directus\Application\Http\Middleware\AuthenticationMiddleware->__invoke
+#12 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#13 [internal function]: Slim\DeferredCallable->__invoke
+#14 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#15 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/TableGatewayMiddleware.php(25): Slim\Route->Slim\{closure}
+#16 [internal function]: Directus\Application\Http\Middleware\TableGatewayMiddleware->__invoke
+#17 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#18 [internal function]: Slim\DeferredCallable->__invoke
+#19 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#20 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/DatabaseMigrationMiddleware.php(15): Slim\Route->Slim\{closure}
+#21 [internal function]: Directus\Application\Http\Middleware\DatabaseMigrationMiddleware->__invoke
+#22 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#23 [internal function]: Slim\DeferredCallable->__invoke
+#24 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#25 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->Slim\{closure}
+#26 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(268): Slim\Route->callMiddlewareStack
+#27 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(503): Slim\Route->run
+#28 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\App->__invoke
+#29 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#30 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#31 [internal function]: Slim\DeferredCallable->__invoke
+#32 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#33 /Users/marin084/Sites/recursosfilantropicoscom/vendor/directus/proxy-detection/src/ProxyDetectionMiddleware.php(30): Slim\App->Slim\{closure}
+#34 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ProxyMiddleware.php(18): RKA\Middleware\ProxyDetectionMiddleware->__invoke
+#35 [internal function]: Directus\Application\Http\Middleware\ProxyMiddleware->__invoke
+#36 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#37 [internal function]: Slim\DeferredCallable->__invoke
+#38 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#39 /Users/marin084/Sites/recursosfilantropicoscom/vendor/akrabat/ip-address-middleware/src/IpAddress.php(113): Slim\App->Slim\{closure}
+#40 [internal function]: RKA\Middleware\IpAddress->__invoke
+#41 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#42 [internal function]: Slim\DeferredCallable->__invoke
+#43 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#44 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/CorsMiddleware.php(71): Slim\App->Slim\{closure}
+#45 [internal function]: Directus\Application\Http\Middleware\CorsMiddleware->__invoke
+#46 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#47 [internal function]: Slim\DeferredCallable->__invoke
+#48 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#49 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ResponseCacheMiddleware.php(63): Slim\App->Slim\{closure}
+#50 [internal function]: Directus\Application\Http\Middleware\ResponseCacheMiddleware->__invoke
+#51 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#52 [internal function]: Slim\DeferredCallable->__invoke
+#53 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#54 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}
+#55 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(392): Slim\App->callMiddlewareStack
+#56 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(297): Slim\App->process
+#57 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Application.php(161): Slim\App->run
+#58 /Users/marin084/Sites/recursosfilantropicoscom/public/index.php(5): Directus\Application\Application->run [] []
+[2023-04-06 09:15:59] api[recursos-filantropicos].ERROR: Directus\Authentication\Exception\InvalidUserCredentialsException: Invalid user credentials in /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Authentication/Provider.php:173
+Stack trace:
+#0 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Authentication/Provider.php(129): Directus\Authentication\Provider->findUserWithCredentials
+#1 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AuthService.php(59): Directus\Authentication\Provider->login
+#2 /Users/marin084/Sites/recursosfilantropicoscom/src/endpoints/Auth.php(67): Directus\Services\AuthService->loginWithCredentials
+#3 [internal function]: Directus\Api\Routes\Auth->authenticate
+#4 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(40): call_user_func
+#5 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke
+#6 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/TableGatewayMiddleware.php(25): Slim\Route->__invoke
+#7 [internal function]: Directus\Application\Http\Middleware\TableGatewayMiddleware->__invoke
+#8 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#9 [internal function]: Slim\DeferredCallable->__invoke
+#10 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#11 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/DatabaseMigrationMiddleware.php(15): Slim\Route->Slim\{closure}
+#12 [internal function]: Directus\Application\Http\Middleware\DatabaseMigrationMiddleware->__invoke
+#13 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#14 [internal function]: Slim\DeferredCallable->__invoke
+#15 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#16 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->Slim\{closure}
+#17 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(268): Slim\Route->callMiddlewareStack
+#18 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(503): Slim\Route->run
+#19 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\App->__invoke
+#20 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#21 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#22 [internal function]: Slim\DeferredCallable->__invoke
+#23 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#24 /Users/marin084/Sites/recursosfilantropicoscom/vendor/directus/proxy-detection/src/ProxyDetectionMiddleware.php(30): Slim\App->Slim\{closure}
+#25 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ProxyMiddleware.php(18): RKA\Middleware\ProxyDetectionMiddleware->__invoke
+#26 [internal function]: Directus\Application\Http\Middleware\ProxyMiddleware->__invoke
+#27 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#28 [internal function]: Slim\DeferredCallable->__invoke
+#29 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#30 /Users/marin084/Sites/recursosfilantropicoscom/vendor/akrabat/ip-address-middleware/src/IpAddress.php(113): Slim\App->Slim\{closure}
+#31 [internal function]: RKA\Middleware\IpAddress->__invoke
+#32 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#33 [internal function]: Slim\DeferredCallable->__invoke
+#34 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#35 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/CorsMiddleware.php(71): Slim\App->Slim\{closure}
+#36 [internal function]: Directus\Application\Http\Middleware\CorsMiddleware->__invoke
+#37 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#38 [internal function]: Slim\DeferredCallable->__invoke
+#39 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#40 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ResponseCacheMiddleware.php(63): Slim\App->Slim\{closure}
+#41 [internal function]: Directus\Application\Http\Middleware\ResponseCacheMiddleware->__invoke
+#42 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#43 [internal function]: Slim\DeferredCallable->__invoke
+#44 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#45 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}
+#46 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(392): Slim\App->callMiddlewareStack
+#47 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(297): Slim\App->process
+#48 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Application.php(161): Slim\App->run
+#49 /Users/marin084/Sites/recursosfilantropicoscom/public/index.php(5): Directus\Application\Application->run [] []
+[2023-04-06 09:58:31] api[recursos-filantropicos].ERROR: Directus\Database\Exception\ItemNotFoundException: Item with id "0" not found in /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php:1192
+Stack trace:
+#0 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php(1287): Directus\Database\TableGateway\RelationalTableGateway->fetchItems
+#1 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php(870): Directus\Database\TableGateway\RelationalTableGateway->fetchData
+#2 [internal function]: Directus\Database\TableGateway\RelationalTableGateway->getItemsByIds
+#3 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(347): call_user_func_array
+#4 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(301): Directus\Services\AbstractService->getDataAndSetResponseCacheTags
+#5 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/ItemsService.php(143): Directus\Services\AbstractService->getItemsByIdsAndSetResponseCacheTags
+#6 /Users/marin084/Sites/recursosfilantropicoscom/src/endpoints/Items.php(90): Directus\Services\ItemsService->findByIds
+#7 [internal function]: Directus\Api\Routes\Items->read
+#8 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(40): call_user_func
+#9 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke
+#10 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\Route->__invoke
+#11 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#12 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#13 [internal function]: Slim\DeferredCallable->__invoke
+#14 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#15 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AuthenticationMiddleware.php(124): Slim\Route->Slim\{closure}
+#16 [internal function]: Directus\Application\Http\Middleware\AuthenticationMiddleware->__invoke
+#17 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#18 [internal function]: Slim\DeferredCallable->__invoke
+#19 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#20 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/TableGatewayMiddleware.php(25): Slim\Route->Slim\{closure}
+#21 [internal function]: Directus\Application\Http\Middleware\TableGatewayMiddleware->__invoke
+#22 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#23 [internal function]: Slim\DeferredCallable->__invoke
+#24 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#25 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/DatabaseMigrationMiddleware.php(15): Slim\Route->Slim\{closure}
+#26 [internal function]: Directus\Application\Http\Middleware\DatabaseMigrationMiddleware->__invoke
+#27 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#28 [internal function]: Slim\DeferredCallable->__invoke
+#29 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#30 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->Slim\{closure}
+#31 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(268): Slim\Route->callMiddlewareStack
+#32 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(503): Slim\Route->run
+#33 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\App->__invoke
+#34 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#35 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#36 [internal function]: Slim\DeferredCallable->__invoke
+#37 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#38 /Users/marin084/Sites/recursosfilantropicoscom/vendor/directus/proxy-detection/src/ProxyDetectionMiddleware.php(30): Slim\App->Slim\{closure}
+#39 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ProxyMiddleware.php(18): RKA\Middleware\ProxyDetectionMiddleware->__invoke
+#40 [internal function]: Directus\Application\Http\Middleware\ProxyMiddleware->__invoke
+#41 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#42 [internal function]: Slim\DeferredCallable->__invoke
+#43 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#44 /Users/marin084/Sites/recursosfilantropicoscom/vendor/akrabat/ip-address-middleware/src/IpAddress.php(113): Slim\App->Slim\{closure}
+#45 [internal function]: RKA\Middleware\IpAddress->__invoke
+#46 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#47 [internal function]: Slim\DeferredCallable->__invoke
+#48 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#49 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/CorsMiddleware.php(71): Slim\App->Slim\{closure}
+#50 [internal function]: Directus\Application\Http\Middleware\CorsMiddleware->__invoke
+#51 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#52 [internal function]: Slim\DeferredCallable->__invoke
+#53 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#54 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ResponseCacheMiddleware.php(63): Slim\App->Slim\{closure}
+#55 [internal function]: Directus\Application\Http\Middleware\ResponseCacheMiddleware->__invoke
+#56 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#57 [internal function]: Slim\DeferredCallable->__invoke
+#58 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#59 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}
+#60 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(392): Slim\App->callMiddlewareStack
+#61 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(297): Slim\App->process
+#62 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Application.php(161): Slim\App->run
+#63 /Users/marin084/Sites/recursosfilantropicoscom/public/index.php(5): Directus\Application\Application->run [] []
+[2023-04-06 09:59:41] api[recursos-filantropicos].ERROR: Directus\Database\Exception\ItemNotFoundException: Item with id "0" not found in /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php:1192
+Stack trace:
+#0 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php(1287): Directus\Database\TableGateway\RelationalTableGateway->fetchItems
+#1 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php(870): Directus\Database\TableGateway\RelationalTableGateway->fetchData
+#2 [internal function]: Directus\Database\TableGateway\RelationalTableGateway->getItemsByIds
+#3 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(347): call_user_func_array
+#4 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(301): Directus\Services\AbstractService->getDataAndSetResponseCacheTags
+#5 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/ItemsService.php(143): Directus\Services\AbstractService->getItemsByIdsAndSetResponseCacheTags
+#6 /Users/marin084/Sites/recursosfilantropicoscom/src/endpoints/Items.php(90): Directus\Services\ItemsService->findByIds
+#7 [internal function]: Directus\Api\Routes\Items->read
+#8 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(40): call_user_func
+#9 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke
+#10 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\Route->__invoke
+#11 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#12 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#13 [internal function]: Slim\DeferredCallable->__invoke
+#14 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#15 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AuthenticationMiddleware.php(124): Slim\Route->Slim\{closure}
+#16 [internal function]: Directus\Application\Http\Middleware\AuthenticationMiddleware->__invoke
+#17 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#18 [internal function]: Slim\DeferredCallable->__invoke
+#19 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#20 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/TableGatewayMiddleware.php(25): Slim\Route->Slim\{closure}
+#21 [internal function]: Directus\Application\Http\Middleware\TableGatewayMiddleware->__invoke
+#22 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#23 [internal function]: Slim\DeferredCallable->__invoke
+#24 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#25 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/DatabaseMigrationMiddleware.php(15): Slim\Route->Slim\{closure}
+#26 [internal function]: Directus\Application\Http\Middleware\DatabaseMigrationMiddleware->__invoke
+#27 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#28 [internal function]: Slim\DeferredCallable->__invoke
+#29 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#30 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->Slim\{closure}
+#31 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(268): Slim\Route->callMiddlewareStack
+#32 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(503): Slim\Route->run
+#33 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\App->__invoke
+#34 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#35 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#36 [internal function]: Slim\DeferredCallable->__invoke
+#37 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#38 /Users/marin084/Sites/recursosfilantropicoscom/vendor/directus/proxy-detection/src/ProxyDetectionMiddleware.php(30): Slim\App->Slim\{closure}
+#39 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ProxyMiddleware.php(18): RKA\Middleware\ProxyDetectionMiddleware->__invoke
+#40 [internal function]: Directus\Application\Http\Middleware\ProxyMiddleware->__invoke
+#41 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#42 [internal function]: Slim\DeferredCallable->__invoke
+#43 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#44 /Users/marin084/Sites/recursosfilantropicoscom/vendor/akrabat/ip-address-middleware/src/IpAddress.php(113): Slim\App->Slim\{closure}
+#45 [internal function]: RKA\Middleware\IpAddress->__invoke
+#46 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#47 [internal function]: Slim\DeferredCallable->__invoke
+#48 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#49 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/CorsMiddleware.php(71): Slim\App->Slim\{closure}
+#50 [internal function]: Directus\Application\Http\Middleware\CorsMiddleware->__invoke
+#51 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#52 [internal function]: Slim\DeferredCallable->__invoke
+#53 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#54 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ResponseCacheMiddleware.php(63): Slim\App->Slim\{closure}
+#55 [internal function]: Directus\Application\Http\Middleware\ResponseCacheMiddleware->__invoke
+#56 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#57 [internal function]: Slim\DeferredCallable->__invoke
+#58 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#59 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}
+#60 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(392): Slim\App->callMiddlewareStack
+#61 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(297): Slim\App->process
+#62 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Application.php(161): Slim\App->run
+#63 /Users/marin084/Sites/recursosfilantropicoscom/public/index.php(5): Directus\Application\Application->run [] []
+[2023-04-06 10:00:05] api[recursos-filantropicos].ERROR: Directus\Validator\Exception\InvalidRequestException: espadre: This value should not be blank. in /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php:186
+Stack trace:
+#0 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(120): Directus\Services\AbstractService->throwErrorIfAny
+#1 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(398): Directus\Services\AbstractService->validate
+#2 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/ItemsService.php(32): Directus\Services\AbstractService->validatePayload
+#3 /Users/marin084/Sites/recursosfilantropicoscom/src/endpoints/Items.php(69): Directus\Services\ItemsService->createItem
+#4 [internal function]: Directus\Api\Routes\Items->create
+#5 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(40): call_user_func
+#6 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke
+#7 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\Route->__invoke
+#8 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#9 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#10 [internal function]: Slim\DeferredCallable->__invoke
+#11 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#12 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AuthenticationMiddleware.php(124): Slim\Route->Slim\{closure}
+#13 [internal function]: Directus\Application\Http\Middleware\AuthenticationMiddleware->__invoke
+#14 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#15 [internal function]: Slim\DeferredCallable->__invoke
+#16 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#17 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/TableGatewayMiddleware.php(25): Slim\Route->Slim\{closure}
+#18 [internal function]: Directus\Application\Http\Middleware\TableGatewayMiddleware->__invoke
+#19 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#20 [internal function]: Slim\DeferredCallable->__invoke
+#21 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#22 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/DatabaseMigrationMiddleware.php(15): Slim\Route->Slim\{closure}
+#23 [internal function]: Directus\Application\Http\Middleware\DatabaseMigrationMiddleware->__invoke
+#24 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#25 [internal function]: Slim\DeferredCallable->__invoke
+#26 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#27 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->Slim\{closure}
+#28 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(268): Slim\Route->callMiddlewareStack
+#29 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(503): Slim\Route->run
+#30 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\App->__invoke
+#31 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#32 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#33 [internal function]: Slim\DeferredCallable->__invoke
+#34 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#35 /Users/marin084/Sites/recursosfilantropicoscom/vendor/directus/proxy-detection/src/ProxyDetectionMiddleware.php(30): Slim\App->Slim\{closure}
+#36 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ProxyMiddleware.php(18): RKA\Middleware\ProxyDetectionMiddleware->__invoke
+#37 [internal function]: Directus\Application\Http\Middleware\ProxyMiddleware->__invoke
+#38 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#39 [internal function]: Slim\DeferredCallable->__invoke
+#40 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#41 /Users/marin084/Sites/recursosfilantropicoscom/vendor/akrabat/ip-address-middleware/src/IpAddress.php(113): Slim\App->Slim\{closure}
+#42 [internal function]: RKA\Middleware\IpAddress->__invoke
+#43 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#44 [internal function]: Slim\DeferredCallable->__invoke
+#45 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#46 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/CorsMiddleware.php(71): Slim\App->Slim\{closure}
+#47 [internal function]: Directus\Application\Http\Middleware\CorsMiddleware->__invoke
+#48 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#49 [internal function]: Slim\DeferredCallable->__invoke
+#50 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#51 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ResponseCacheMiddleware.php(63): Slim\App->Slim\{closure}
+#52 [internal function]: Directus\Application\Http\Middleware\ResponseCacheMiddleware->__invoke
+#53 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#54 [internal function]: Slim\DeferredCallable->__invoke
+#55 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#56 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}
+#57 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(392): Slim\App->callMiddlewareStack
+#58 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(297): Slim\App->process
+#59 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Application.php(161): Slim\App->run
+#60 /Users/marin084/Sites/recursosfilantropicoscom/public/index.php(5): Directus\Application\Application->run [] []
+[2023-04-06 10:01:56] api[recursos-filantropicos].ERROR: Directus\Database\Exception\ItemNotFoundException: Item with id "0" not found in /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php:1192
+Stack trace:
+#0 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php(1287): Directus\Database\TableGateway\RelationalTableGateway->fetchItems
+#1 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php(870): Directus\Database\TableGateway\RelationalTableGateway->fetchData
+#2 [internal function]: Directus\Database\TableGateway\RelationalTableGateway->getItemsByIds
+#3 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(347): call_user_func_array
+#4 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(301): Directus\Services\AbstractService->getDataAndSetResponseCacheTags
+#5 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/ItemsService.php(143): Directus\Services\AbstractService->getItemsByIdsAndSetResponseCacheTags
+#6 /Users/marin084/Sites/recursosfilantropicoscom/src/endpoints/Items.php(90): Directus\Services\ItemsService->findByIds
+#7 [internal function]: Directus\Api\Routes\Items->read
+#8 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(40): call_user_func
+#9 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke
+#10 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\Route->__invoke
+#11 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#12 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#13 [internal function]: Slim\DeferredCallable->__invoke
+#14 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#15 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AuthenticationMiddleware.php(124): Slim\Route->Slim\{closure}
+#16 [internal function]: Directus\Application\Http\Middleware\AuthenticationMiddleware->__invoke
+#17 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#18 [internal function]: Slim\DeferredCallable->__invoke
+#19 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#20 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/TableGatewayMiddleware.php(25): Slim\Route->Slim\{closure}
+#21 [internal function]: Directus\Application\Http\Middleware\TableGatewayMiddleware->__invoke
+#22 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#23 [internal function]: Slim\DeferredCallable->__invoke
+#24 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#25 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/DatabaseMigrationMiddleware.php(15): Slim\Route->Slim\{closure}
+#26 [internal function]: Directus\Application\Http\Middleware\DatabaseMigrationMiddleware->__invoke
+#27 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#28 [internal function]: Slim\DeferredCallable->__invoke
+#29 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#30 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->Slim\{closure}
+#31 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(268): Slim\Route->callMiddlewareStack
+#32 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(503): Slim\Route->run
+#33 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\App->__invoke
+#34 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#35 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#36 [internal function]: Slim\DeferredCallable->__invoke
+#37 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#38 /Users/marin084/Sites/recursosfilantropicoscom/vendor/directus/proxy-detection/src/ProxyDetectionMiddleware.php(30): Slim\App->Slim\{closure}
+#39 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ProxyMiddleware.php(18): RKA\Middleware\ProxyDetectionMiddleware->__invoke
+#40 [internal function]: Directus\Application\Http\Middleware\ProxyMiddleware->__invoke
+#41 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#42 [internal function]: Slim\DeferredCallable->__invoke
+#43 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#44 /Users/marin084/Sites/recursosfilantropicoscom/vendor/akrabat/ip-address-middleware/src/IpAddress.php(113): Slim\App->Slim\{closure}
+#45 [internal function]: RKA\Middleware\IpAddress->__invoke
+#46 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#47 [internal function]: Slim\DeferredCallable->__invoke
+#48 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#49 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/CorsMiddleware.php(71): Slim\App->Slim\{closure}
+#50 [internal function]: Directus\Application\Http\Middleware\CorsMiddleware->__invoke
+#51 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#52 [internal function]: Slim\DeferredCallable->__invoke
+#53 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#54 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ResponseCacheMiddleware.php(63): Slim\App->Slim\{closure}
+#55 [internal function]: Directus\Application\Http\Middleware\ResponseCacheMiddleware->__invoke
+#56 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#57 [internal function]: Slim\DeferredCallable->__invoke
+#58 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#59 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}
+#60 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(392): Slim\App->callMiddlewareStack
+#61 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(297): Slim\App->process
+#62 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Application.php(161): Slim\App->run
+#63 /Users/marin084/Sites/recursosfilantropicoscom/public/index.php(5): Directus\Application\Application->run [] []
+[2023-04-06 10:02:31] api[recursos-filantropicos].ERROR: Directus\Validator\Exception\InvalidRequestException: espadre: This value should not be blank. in /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php:186
+Stack trace:
+#0 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(120): Directus\Services\AbstractService->throwErrorIfAny
+#1 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(398): Directus\Services\AbstractService->validate
+#2 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/ItemsService.php(32): Directus\Services\AbstractService->validatePayload
+#3 /Users/marin084/Sites/recursosfilantropicoscom/src/endpoints/Items.php(69): Directus\Services\ItemsService->createItem
+#4 [internal function]: Directus\Api\Routes\Items->create
+#5 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(40): call_user_func
+#6 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke
+#7 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\Route->__invoke
+#8 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#9 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#10 [internal function]: Slim\DeferredCallable->__invoke
+#11 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#12 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AuthenticationMiddleware.php(124): Slim\Route->Slim\{closure}
+#13 [internal function]: Directus\Application\Http\Middleware\AuthenticationMiddleware->__invoke
+#14 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#15 [internal function]: Slim\DeferredCallable->__invoke
+#16 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#17 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/TableGatewayMiddleware.php(25): Slim\Route->Slim\{closure}
+#18 [internal function]: Directus\Application\Http\Middleware\TableGatewayMiddleware->__invoke
+#19 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#20 [internal function]: Slim\DeferredCallable->__invoke
+#21 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#22 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/DatabaseMigrationMiddleware.php(15): Slim\Route->Slim\{closure}
+#23 [internal function]: Directus\Application\Http\Middleware\DatabaseMigrationMiddleware->__invoke
+#24 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#25 [internal function]: Slim\DeferredCallable->__invoke
+#26 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#27 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->Slim\{closure}
+#28 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(268): Slim\Route->callMiddlewareStack
+#29 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(503): Slim\Route->run
+#30 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\App->__invoke
+#31 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#32 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#33 [internal function]: Slim\DeferredCallable->__invoke
+#34 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#35 /Users/marin084/Sites/recursosfilantropicoscom/vendor/directus/proxy-detection/src/ProxyDetectionMiddleware.php(30): Slim\App->Slim\{closure}
+#36 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ProxyMiddleware.php(18): RKA\Middleware\ProxyDetectionMiddleware->__invoke
+#37 [internal function]: Directus\Application\Http\Middleware\ProxyMiddleware->__invoke
+#38 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#39 [internal function]: Slim\DeferredCallable->__invoke
+#40 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#41 /Users/marin084/Sites/recursosfilantropicoscom/vendor/akrabat/ip-address-middleware/src/IpAddress.php(113): Slim\App->Slim\{closure}
+#42 [internal function]: RKA\Middleware\IpAddress->__invoke
+#43 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#44 [internal function]: Slim\DeferredCallable->__invoke
+#45 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#46 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/CorsMiddleware.php(71): Slim\App->Slim\{closure}
+#47 [internal function]: Directus\Application\Http\Middleware\CorsMiddleware->__invoke
+#48 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#49 [internal function]: Slim\DeferredCallable->__invoke
+#50 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#51 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ResponseCacheMiddleware.php(63): Slim\App->Slim\{closure}
+#52 [internal function]: Directus\Application\Http\Middleware\ResponseCacheMiddleware->__invoke
+#53 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#54 [internal function]: Slim\DeferredCallable->__invoke
+#55 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#56 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}
+#57 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(392): Slim\App->callMiddlewareStack
+#58 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(297): Slim\App->process
+#59 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Application.php(161): Slim\App->run
+#60 /Users/marin084/Sites/recursosfilantropicoscom/public/index.php(5): Directus\Application\Application->run [] []
+[2023-04-06 10:03:03] api[recursos-filantropicos].ERROR: Directus\Database\Exception\ItemNotFoundException: Item with id "0" not found in /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php:1192
+Stack trace:
+#0 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php(1287): Directus\Database\TableGateway\RelationalTableGateway->fetchItems
+#1 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php(870): Directus\Database\TableGateway\RelationalTableGateway->fetchData
+#2 [internal function]: Directus\Database\TableGateway\RelationalTableGateway->getItemsByIds
+#3 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(347): call_user_func_array
+#4 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(301): Directus\Services\AbstractService->getDataAndSetResponseCacheTags
+#5 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/ItemsService.php(143): Directus\Services\AbstractService->getItemsByIdsAndSetResponseCacheTags
+#6 /Users/marin084/Sites/recursosfilantropicoscom/src/endpoints/Items.php(90): Directus\Services\ItemsService->findByIds
+#7 [internal function]: Directus\Api\Routes\Items->read
+#8 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(40): call_user_func
+#9 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke
+#10 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\Route->__invoke
+#11 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#12 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#13 [internal function]: Slim\DeferredCallable->__invoke
+#14 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#15 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AuthenticationMiddleware.php(124): Slim\Route->Slim\{closure}
+#16 [internal function]: Directus\Application\Http\Middleware\AuthenticationMiddleware->__invoke
+#17 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#18 [internal function]: Slim\DeferredCallable->__invoke
+#19 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#20 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/TableGatewayMiddleware.php(25): Slim\Route->Slim\{closure}
+#21 [internal function]: Directus\Application\Http\Middleware\TableGatewayMiddleware->__invoke
+#22 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#23 [internal function]: Slim\DeferredCallable->__invoke
+#24 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#25 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/DatabaseMigrationMiddleware.php(15): Slim\Route->Slim\{closure}
+#26 [internal function]: Directus\Application\Http\Middleware\DatabaseMigrationMiddleware->__invoke
+#27 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#28 [internal function]: Slim\DeferredCallable->__invoke
+#29 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#30 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->Slim\{closure}
+#31 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(268): Slim\Route->callMiddlewareStack
+#32 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(503): Slim\Route->run
+#33 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\App->__invoke
+#34 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#35 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#36 [internal function]: Slim\DeferredCallable->__invoke
+#37 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#38 /Users/marin084/Sites/recursosfilantropicoscom/vendor/directus/proxy-detection/src/ProxyDetectionMiddleware.php(30): Slim\App->Slim\{closure}
+#39 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ProxyMiddleware.php(18): RKA\Middleware\ProxyDetectionMiddleware->__invoke
+#40 [internal function]: Directus\Application\Http\Middleware\ProxyMiddleware->__invoke
+#41 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#42 [internal function]: Slim\DeferredCallable->__invoke
+#43 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#44 /Users/marin084/Sites/recursosfilantropicoscom/vendor/akrabat/ip-address-middleware/src/IpAddress.php(113): Slim\App->Slim\{closure}
+#45 [internal function]: RKA\Middleware\IpAddress->__invoke
+#46 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#47 [internal function]: Slim\DeferredCallable->__invoke
+#48 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#49 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/CorsMiddleware.php(71): Slim\App->Slim\{closure}
+#50 [internal function]: Directus\Application\Http\Middleware\CorsMiddleware->__invoke
+#51 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#52 [internal function]: Slim\DeferredCallable->__invoke
+#53 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#54 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ResponseCacheMiddleware.php(63): Slim\App->Slim\{closure}
+#55 [internal function]: Directus\Application\Http\Middleware\ResponseCacheMiddleware->__invoke
+#56 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#57 [internal function]: Slim\DeferredCallable->__invoke
+#58 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#59 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}
+#60 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(392): Slim\App->callMiddlewareStack
+#61 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(297): Slim\App->process
+#62 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Application.php(161): Slim\App->run
+#63 /Users/marin084/Sites/recursosfilantropicoscom/public/index.php(5): Directus\Application\Application->run [] []
+[2023-04-06 10:03:36] api[recursos-filantropicos].ERROR: Directus\Database\Exception\ItemNotFoundException: Item with id "0" not found in /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php:1192
+Stack trace:
+#0 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php(1287): Directus\Database\TableGateway\RelationalTableGateway->fetchItems
+#1 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php(870): Directus\Database\TableGateway\RelationalTableGateway->fetchData
+#2 [internal function]: Directus\Database\TableGateway\RelationalTableGateway->getItemsByIds
+#3 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(347): call_user_func_array
+#4 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(301): Directus\Services\AbstractService->getDataAndSetResponseCacheTags
+#5 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/ItemsService.php(143): Directus\Services\AbstractService->getItemsByIdsAndSetResponseCacheTags
+#6 /Users/marin084/Sites/recursosfilantropicoscom/src/endpoints/Items.php(90): Directus\Services\ItemsService->findByIds
+#7 [internal function]: Directus\Api\Routes\Items->read
+#8 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(40): call_user_func
+#9 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke
+#10 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\Route->__invoke
+#11 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#12 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#13 [internal function]: Slim\DeferredCallable->__invoke
+#14 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#15 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AuthenticationMiddleware.php(124): Slim\Route->Slim\{closure}
+#16 [internal function]: Directus\Application\Http\Middleware\AuthenticationMiddleware->__invoke
+#17 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#18 [internal function]: Slim\DeferredCallable->__invoke
+#19 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#20 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/TableGatewayMiddleware.php(25): Slim\Route->Slim\{closure}
+#21 [internal function]: Directus\Application\Http\Middleware\TableGatewayMiddleware->__invoke
+#22 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#23 [internal function]: Slim\DeferredCallable->__invoke
+#24 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#25 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/DatabaseMigrationMiddleware.php(15): Slim\Route->Slim\{closure}
+#26 [internal function]: Directus\Application\Http\Middleware\DatabaseMigrationMiddleware->__invoke
+#27 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#28 [internal function]: Slim\DeferredCallable->__invoke
+#29 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#30 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->Slim\{closure}
+#31 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(268): Slim\Route->callMiddlewareStack
+#32 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(503): Slim\Route->run
+#33 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\App->__invoke
+#34 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#35 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#36 [internal function]: Slim\DeferredCallable->__invoke
+#37 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#38 /Users/marin084/Sites/recursosfilantropicoscom/vendor/directus/proxy-detection/src/ProxyDetectionMiddleware.php(30): Slim\App->Slim\{closure}
+#39 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ProxyMiddleware.php(18): RKA\Middleware\ProxyDetectionMiddleware->__invoke
+#40 [internal function]: Directus\Application\Http\Middleware\ProxyMiddleware->__invoke
+#41 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#42 [internal function]: Slim\DeferredCallable->__invoke
+#43 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#44 /Users/marin084/Sites/recursosfilantropicoscom/vendor/akrabat/ip-address-middleware/src/IpAddress.php(113): Slim\App->Slim\{closure}
+#45 [internal function]: RKA\Middleware\IpAddress->__invoke
+#46 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#47 [internal function]: Slim\DeferredCallable->__invoke
+#48 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#49 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/CorsMiddleware.php(71): Slim\App->Slim\{closure}
+#50 [internal function]: Directus\Application\Http\Middleware\CorsMiddleware->__invoke
+#51 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#52 [internal function]: Slim\DeferredCallable->__invoke
+#53 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#54 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ResponseCacheMiddleware.php(63): Slim\App->Slim\{closure}
+#55 [internal function]: Directus\Application\Http\Middleware\ResponseCacheMiddleware->__invoke
+#56 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#57 [internal function]: Slim\DeferredCallable->__invoke
+#58 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#59 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}
+#60 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(392): Slim\App->callMiddlewareStack
+#61 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(297): Slim\App->process
+#62 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Application.php(161): Slim\App->run
+#63 /Users/marin084/Sites/recursosfilantropicoscom/public/index.php(5): Directus\Application\Application->run [] []
+[2023-04-06 10:03:50] api[recursos-filantropicos].ERROR: Directus\Database\Exception\ItemNotFoundException: Item with id "0" not found in /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php:1192
+Stack trace:
+#0 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php(1287): Directus\Database\TableGateway\RelationalTableGateway->fetchItems
+#1 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php(870): Directus\Database\TableGateway\RelationalTableGateway->fetchData
+#2 [internal function]: Directus\Database\TableGateway\RelationalTableGateway->getItemsByIds
+#3 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(347): call_user_func_array
+#4 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(301): Directus\Services\AbstractService->getDataAndSetResponseCacheTags
+#5 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/ItemsService.php(143): Directus\Services\AbstractService->getItemsByIdsAndSetResponseCacheTags
+#6 /Users/marin084/Sites/recursosfilantropicoscom/src/endpoints/Items.php(90): Directus\Services\ItemsService->findByIds
+#7 [internal function]: Directus\Api\Routes\Items->read
+#8 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(40): call_user_func
+#9 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke
+#10 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\Route->__invoke
+#11 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#12 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#13 [internal function]: Slim\DeferredCallable->__invoke
+#14 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#15 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AuthenticationMiddleware.php(124): Slim\Route->Slim\{closure}
+#16 [internal function]: Directus\Application\Http\Middleware\AuthenticationMiddleware->__invoke
+#17 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#18 [internal function]: Slim\DeferredCallable->__invoke
+#19 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#20 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/TableGatewayMiddleware.php(25): Slim\Route->Slim\{closure}
+#21 [internal function]: Directus\Application\Http\Middleware\TableGatewayMiddleware->__invoke
+#22 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#23 [internal function]: Slim\DeferredCallable->__invoke
+#24 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#25 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/DatabaseMigrationMiddleware.php(15): Slim\Route->Slim\{closure}
+#26 [internal function]: Directus\Application\Http\Middleware\DatabaseMigrationMiddleware->__invoke
+#27 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#28 [internal function]: Slim\DeferredCallable->__invoke
+#29 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#30 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->Slim\{closure}
+#31 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(268): Slim\Route->callMiddlewareStack
+#32 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(503): Slim\Route->run
+#33 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\App->__invoke
+#34 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#35 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#36 [internal function]: Slim\DeferredCallable->__invoke
+#37 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#38 /Users/marin084/Sites/recursosfilantropicoscom/vendor/directus/proxy-detection/src/ProxyDetectionMiddleware.php(30): Slim\App->Slim\{closure}
+#39 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ProxyMiddleware.php(18): RKA\Middleware\ProxyDetectionMiddleware->__invoke
+#40 [internal function]: Directus\Application\Http\Middleware\ProxyMiddleware->__invoke
+#41 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#42 [internal function]: Slim\DeferredCallable->__invoke
+#43 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#44 /Users/marin084/Sites/recursosfilantropicoscom/vendor/akrabat/ip-address-middleware/src/IpAddress.php(113): Slim\App->Slim\{closure}
+#45 [internal function]: RKA\Middleware\IpAddress->__invoke
+#46 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#47 [internal function]: Slim\DeferredCallable->__invoke
+#48 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#49 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/CorsMiddleware.php(71): Slim\App->Slim\{closure}
+#50 [internal function]: Directus\Application\Http\Middleware\CorsMiddleware->__invoke
+#51 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#52 [internal function]: Slim\DeferredCallable->__invoke
+#53 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#54 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ResponseCacheMiddleware.php(63): Slim\App->Slim\{closure}
+#55 [internal function]: Directus\Application\Http\Middleware\ResponseCacheMiddleware->__invoke
+#56 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#57 [internal function]: Slim\DeferredCallable->__invoke
+#58 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#59 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}
+#60 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(392): Slim\App->callMiddlewareStack
+#61 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(297): Slim\App->process
+#62 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Application.php(161): Slim\App->run
+#63 /Users/marin084/Sites/recursosfilantropicoscom/public/index.php(5): Directus\Application\Application->run [] []
+[2023-04-06 10:04:06] api[recursos-filantropicos].ERROR: Directus\Database\Exception\ItemNotFoundException: Item with id "0" not found in /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php:1192
+Stack trace:
+#0 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php(1287): Directus\Database\TableGateway\RelationalTableGateway->fetchItems
+#1 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Database/TableGateway/RelationalTableGateway.php(870): Directus\Database\TableGateway\RelationalTableGateway->fetchData
+#2 [internal function]: Directus\Database\TableGateway\RelationalTableGateway->getItemsByIds
+#3 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(347): call_user_func_array
+#4 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(301): Directus\Services\AbstractService->getDataAndSetResponseCacheTags
+#5 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/ItemsService.php(143): Directus\Services\AbstractService->getItemsByIdsAndSetResponseCacheTags
+#6 /Users/marin084/Sites/recursosfilantropicoscom/src/endpoints/Items.php(90): Directus\Services\ItemsService->findByIds
+#7 [internal function]: Directus\Api\Routes\Items->read
+#8 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(40): call_user_func
+#9 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke
+#10 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\Route->__invoke
+#11 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#12 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#13 [internal function]: Slim\DeferredCallable->__invoke
+#14 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#15 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AuthenticationMiddleware.php(124): Slim\Route->Slim\{closure}
+#16 [internal function]: Directus\Application\Http\Middleware\AuthenticationMiddleware->__invoke
+#17 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#18 [internal function]: Slim\DeferredCallable->__invoke
+#19 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#20 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/TableGatewayMiddleware.php(25): Slim\Route->Slim\{closure}
+#21 [internal function]: Directus\Application\Http\Middleware\TableGatewayMiddleware->__invoke
+#22 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#23 [internal function]: Slim\DeferredCallable->__invoke
+#24 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#25 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/DatabaseMigrationMiddleware.php(15): Slim\Route->Slim\{closure}
+#26 [internal function]: Directus\Application\Http\Middleware\DatabaseMigrationMiddleware->__invoke
+#27 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#28 [internal function]: Slim\DeferredCallable->__invoke
+#29 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#30 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->Slim\{closure}
+#31 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(268): Slim\Route->callMiddlewareStack
+#32 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(503): Slim\Route->run
+#33 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\App->__invoke
+#34 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#35 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#36 [internal function]: Slim\DeferredCallable->__invoke
+#37 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#38 /Users/marin084/Sites/recursosfilantropicoscom/vendor/directus/proxy-detection/src/ProxyDetectionMiddleware.php(30): Slim\App->Slim\{closure}
+#39 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ProxyMiddleware.php(18): RKA\Middleware\ProxyDetectionMiddleware->__invoke
+#40 [internal function]: Directus\Application\Http\Middleware\ProxyMiddleware->__invoke
+#41 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#42 [internal function]: Slim\DeferredCallable->__invoke
+#43 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#44 /Users/marin084/Sites/recursosfilantropicoscom/vendor/akrabat/ip-address-middleware/src/IpAddress.php(113): Slim\App->Slim\{closure}
+#45 [internal function]: RKA\Middleware\IpAddress->__invoke
+#46 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#47 [internal function]: Slim\DeferredCallable->__invoke
+#48 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#49 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/CorsMiddleware.php(71): Slim\App->Slim\{closure}
+#50 [internal function]: Directus\Application\Http\Middleware\CorsMiddleware->__invoke
+#51 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#52 [internal function]: Slim\DeferredCallable->__invoke
+#53 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#54 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ResponseCacheMiddleware.php(63): Slim\App->Slim\{closure}
+#55 [internal function]: Directus\Application\Http\Middleware\ResponseCacheMiddleware->__invoke
+#56 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#57 [internal function]: Slim\DeferredCallable->__invoke
+#58 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#59 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}
+#60 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(392): Slim\App->callMiddlewareStack
+#61 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(297): Slim\App->process
+#62 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Application.php(161): Slim\App->run
+#63 /Users/marin084/Sites/recursosfilantropicoscom/public/index.php(5): Directus\Application\Application->run [] []
+[2023-04-06 10:07:58] api[recursos-filantropicos].ERROR: Directus\Validator\Exception\InvalidRequestException: alias: This value should not be blank. in /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php:186
+Stack trace:
+#0 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(120): Directus\Services\AbstractService->throwErrorIfAny
+#1 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(398): Directus\Services\AbstractService->validate
+#2 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/ItemsService.php(32): Directus\Services\AbstractService->validatePayload
+#3 /Users/marin084/Sites/recursosfilantropicoscom/src/endpoints/Items.php(69): Directus\Services\ItemsService->createItem
+#4 [internal function]: Directus\Api\Routes\Items->create
+#5 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(40): call_user_func
+#6 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke
+#7 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\Route->__invoke
+#8 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#9 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#10 [internal function]: Slim\DeferredCallable->__invoke
+#11 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#12 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AuthenticationMiddleware.php(124): Slim\Route->Slim\{closure}
+#13 [internal function]: Directus\Application\Http\Middleware\AuthenticationMiddleware->__invoke
+#14 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#15 [internal function]: Slim\DeferredCallable->__invoke
+#16 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#17 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/TableGatewayMiddleware.php(25): Slim\Route->Slim\{closure}
+#18 [internal function]: Directus\Application\Http\Middleware\TableGatewayMiddleware->__invoke
+#19 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#20 [internal function]: Slim\DeferredCallable->__invoke
+#21 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#22 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/DatabaseMigrationMiddleware.php(15): Slim\Route->Slim\{closure}
+#23 [internal function]: Directus\Application\Http\Middleware\DatabaseMigrationMiddleware->__invoke
+#24 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#25 [internal function]: Slim\DeferredCallable->__invoke
+#26 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#27 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->Slim\{closure}
+#28 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(268): Slim\Route->callMiddlewareStack
+#29 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(503): Slim\Route->run
+#30 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\App->__invoke
+#31 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#32 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#33 [internal function]: Slim\DeferredCallable->__invoke
+#34 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#35 /Users/marin084/Sites/recursosfilantropicoscom/vendor/directus/proxy-detection/src/ProxyDetectionMiddleware.php(30): Slim\App->Slim\{closure}
+#36 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ProxyMiddleware.php(18): RKA\Middleware\ProxyDetectionMiddleware->__invoke
+#37 [internal function]: Directus\Application\Http\Middleware\ProxyMiddleware->__invoke
+#38 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#39 [internal function]: Slim\DeferredCallable->__invoke
+#40 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#41 /Users/marin084/Sites/recursosfilantropicoscom/vendor/akrabat/ip-address-middleware/src/IpAddress.php(113): Slim\App->Slim\{closure}
+#42 [internal function]: RKA\Middleware\IpAddress->__invoke
+#43 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#44 [internal function]: Slim\DeferredCallable->__invoke
+#45 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#46 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/CorsMiddleware.php(71): Slim\App->Slim\{closure}
+#47 [internal function]: Directus\Application\Http\Middleware\CorsMiddleware->__invoke
+#48 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#49 [internal function]: Slim\DeferredCallable->__invoke
+#50 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#51 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ResponseCacheMiddleware.php(63): Slim\App->Slim\{closure}
+#52 [internal function]: Directus\Application\Http\Middleware\ResponseCacheMiddleware->__invoke
+#53 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#54 [internal function]: Slim\DeferredCallable->__invoke
+#55 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#56 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}
+#57 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(392): Slim\App->callMiddlewareStack
+#58 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(297): Slim\App->process
+#59 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Application.php(161): Slim\App->run
+#60 /Users/marin084/Sites/recursosfilantropicoscom/public/index.php(5): Directus\Application\Application->run [] []
+[2023-04-06 10:09:34] api[recursos-filantropicos].ERROR: Directus\Validator\Exception\InvalidRequestException: servicio: This value should not be blank. idioma: This value should not be blank. alias: This value should not be blank. in /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php:186
+Stack trace:
+#0 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(120): Directus\Services\AbstractService->throwErrorIfAny
+#1 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/AbstractService.php(398): Directus\Services\AbstractService->validate
+#2 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Services/ItemsService.php(32): Directus\Services\AbstractService->validatePayload
+#3 /Users/marin084/Sites/recursosfilantropicoscom/src/endpoints/Items.php(69): Directus\Services\ItemsService->createItem
+#4 [internal function]: Directus\Api\Routes\Items->create
+#5 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(40): call_user_func
+#6 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke
+#7 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\Route->__invoke
+#8 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#9 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#10 [internal function]: Slim\DeferredCallable->__invoke
+#11 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#12 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AuthenticationMiddleware.php(124): Slim\Route->Slim\{closure}
+#13 [internal function]: Directus\Application\Http\Middleware\AuthenticationMiddleware->__invoke
+#14 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#15 [internal function]: Slim\DeferredCallable->__invoke
+#16 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#17 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/TableGatewayMiddleware.php(25): Slim\Route->Slim\{closure}
+#18 [internal function]: Directus\Application\Http\Middleware\TableGatewayMiddleware->__invoke
+#19 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#20 [internal function]: Slim\DeferredCallable->__invoke
+#21 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#22 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/DatabaseMigrationMiddleware.php(15): Slim\Route->Slim\{closure}
+#23 [internal function]: Directus\Application\Http\Middleware\DatabaseMigrationMiddleware->__invoke
+#24 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#25 [internal function]: Slim\DeferredCallable->__invoke
+#26 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#27 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->Slim\{closure}
+#28 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/Route.php(268): Slim\Route->callMiddlewareStack
+#29 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(503): Slim\Route->run
+#30 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/AbstractRateLimitMiddleware.php(34): Slim\App->__invoke
+#31 [internal function]: Directus\Application\Http\Middleware\AbstractRateLimitMiddleware->__invoke
+#32 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#33 [internal function]: Slim\DeferredCallable->__invoke
+#34 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#35 /Users/marin084/Sites/recursosfilantropicoscom/vendor/directus/proxy-detection/src/ProxyDetectionMiddleware.php(30): Slim\App->Slim\{closure}
+#36 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ProxyMiddleware.php(18): RKA\Middleware\ProxyDetectionMiddleware->__invoke
+#37 [internal function]: Directus\Application\Http\Middleware\ProxyMiddleware->__invoke
+#38 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#39 [internal function]: Slim\DeferredCallable->__invoke
+#40 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#41 /Users/marin084/Sites/recursosfilantropicoscom/vendor/akrabat/ip-address-middleware/src/IpAddress.php(113): Slim\App->Slim\{closure}
+#42 [internal function]: RKA\Middleware\IpAddress->__invoke
+#43 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#44 [internal function]: Slim\DeferredCallable->__invoke
+#45 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#46 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/CorsMiddleware.php(71): Slim\App->Slim\{closure}
+#47 [internal function]: Directus\Application\Http\Middleware\CorsMiddleware->__invoke
+#48 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#49 [internal function]: Slim\DeferredCallable->__invoke
+#50 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#51 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Http/Middleware/ResponseCacheMiddleware.php(63): Slim\App->Slim\{closure}
+#52 [internal function]: Directus\Application\Http\Middleware\ResponseCacheMiddleware->__invoke
+#53 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/DeferredCallable.php(57): call_user_func_array
+#54 [internal function]: Slim\DeferredCallable->__invoke
+#55 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(70): call_user_func
+#56 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}
+#57 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(392): Slim\App->callMiddlewareStack
+#58 /Users/marin084/Sites/recursosfilantropicoscom/vendor/slim/slim/Slim/App.php(297): Slim\App->process
+#59 /Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Application/Application.php(161): Slim\App->run
+#60 /Users/marin084/Sites/recursosfilantropicoscom/public/index.php(5): Directus\Application\Application->run [] []
