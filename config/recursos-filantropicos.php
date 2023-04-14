@@ -52,8 +52,8 @@ return [
 
     'storage' => [
         'adapter' => 'local',
-        'root' => 'public/uploads/recursos-filantropicos/originals',
-        'root_url' => '/uploads/recursos-filantropicos/originals',
+        'root' => '/Users/marin084/Sites/recursosfilantropicoscom/www/assets/uploads',
+        'root_url' => 'http://recursosfilantropicos.local/assets/uploads',
         'thumb_root' => 'public/uploads/recursos-filantropicos/generated',
         // 'key' => '',
         // 'secret' => '',
@@ -112,6 +112,6 @@ return [
     'env' => 'production',
 
     'logger' => [
-        'path' => '/Users/marin084/Sites/recursosfilantropicoscom/src/core/Directus/Util/Installation/../../../../../logs',
+        'path' => '/Users/marin084/Sites/recursosfilantropicoscom/logs',
     ],
 ];

@@ -1,0 +1,3 @@
+User-Agent: *
+Disallow:
+Sitemap: http://cirugiasyhernias.com/sitemap.xml
