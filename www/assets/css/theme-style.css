@@ -35689,3 +35689,8 @@ a.op-10:hover,
  .logo {
   width: 250px;
  }
+
+.carousel-control-next,
+.carousel-control-prev {
+   width: 10%!important;
+}

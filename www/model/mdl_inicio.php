@@ -44,7 +44,7 @@
 	}
 
 	function getListBanner($conn,$lang,$page) {
-		$sql ="SELECT * FROM `view_banner` WHERE lang='$lang' AND `seccion`='$page' ORDER BY RAND() LIMIT 1;";
+		$sql ="SELECT * FROM `view_banner` WHERE lang='$lang' AND `seccion`='$page' ORDER BY RAND();";
 		// echo $sql;die;
 		// $sql ="SELECT `titulo`,`texto`,`img`,`textbnt`,`link` FROM `view_banner` WHERE `seccion`='$page' ORDER BY RAND() Limit 1;";
 		$statement = $conn->prepare($sql);
